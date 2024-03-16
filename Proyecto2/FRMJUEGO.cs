@@ -16,6 +16,8 @@ namespace Proyecto2
         private Queue<string> turnos; // Cola para almacenar el orden de los turnos
         private Stack<string> ordenJugadas; // Pila para almacenar el orden de las jugadas
         private string jugadorActual; // Nombre del jugador actual
+        private bool mouseDown;
+        private Point lastPos;
 
         public FRMJUEGO()
         {
@@ -90,6 +92,34 @@ namespace Proyecto2
             guna2CirclePictureBox1.Image = Jugador1.Imagen;
             guna2CirclePictureBox2.Image = Jugador2.Imagen;
 
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void P_J1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastPos = MousePosition;
+        }
+
+        private void P_J1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                int xoffset = MousePosition.X - lastPos.X;
+                int yoffset = MousePosition.Y - lastPos.Y;
+                Left += xoffset;
+                Top += yoffset;
+                lastPos = MousePosition;
+            }
+        }
+
+        private void P_J1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
     }
 }
