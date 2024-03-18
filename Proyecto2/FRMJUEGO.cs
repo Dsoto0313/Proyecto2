@@ -75,16 +75,6 @@ namespace Proyecto2
             ordenJugadas.Push(jugador);
         }
 
-        private void Img_ficha1_MouseEnter(object sender, EventArgs e)
-        {
-            Img_ficha1.Image = Jugador1.Imagen;
-        }
-
-        private void Img_ficha1_MouseLeave(object sender, EventArgs e)
-        {
-            Img_ficha1.Image = null;
-        }
-
         private void FRMJUEGO_Load(object sender, EventArgs e)
         {
             guna2HtmlLabel1.Text = Jugador1.nombre;
@@ -121,5 +111,80 @@ namespace Proyecto2
         {
             mouseDown = false;
         }
+
+        #region MostrarFichaMouse
+
+        private void Img_ficha1_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha1.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha1_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha1.Image = null;
+        }
+        private void Img_ficha2_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha2.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha2_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha2.Image = null;
+        }
+
+        private void Img_ficha3_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha3.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha3_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha3.Image = null;
+        }
+
+        private void Img_ficha4_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha4.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha4_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha4.Image = null;
+        }
+
+        private void Img_ficha5_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha5.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha5_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha5.Image = null;
+        }
+
+        private void Img_ficha6_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha6.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha6_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha6.Image = null;
+        }
+
+        private void Img_ficha7_MouseEnter(object sender, EventArgs e)
+        {
+            Img_ficha7.Image = Jugador1.Imagen;
+        }
+
+        private void Img_ficha7_MouseLeave(object sender, EventArgs e)
+        {
+            Img_ficha7.Image = null;
+        }
+        #endregion
+
+
+
     }
 }
