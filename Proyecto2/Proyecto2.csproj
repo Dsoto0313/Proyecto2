@@ -81,6 +81,7 @@
     <Compile Include="Mensajes\Mensaje.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tablero.cs" />
     <EmbeddedResource Include="FRMJUEGO.resx">
       <DependentUpon>FRMJUEGO.cs</DependentUpon>
     </EmbeddedResource>

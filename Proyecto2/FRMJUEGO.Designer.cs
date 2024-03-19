@@ -347,6 +347,7 @@ namespace Proyecto2
             this.Img_ficha1.TabIndex = 6;
             this.Img_ficha1.TabStop = false;
             this.Img_ficha1.UseTransparentBackground = true;
+            this.Img_ficha1.Click += new System.EventHandler(this.Img_ficha1_Click_1);
             this.Img_ficha1.MouseEnter += new System.EventHandler(this.Img_ficha1_MouseEnter);
             this.Img_ficha1.MouseLeave += new System.EventHandler(this.Img_ficha1_MouseLeave);
             // 
@@ -363,6 +364,7 @@ namespace Proyecto2
             this.Img_ficha2.TabIndex = 7;
             this.Img_ficha2.TabStop = false;
             this.Img_ficha2.UseTransparentBackground = true;
+            this.Img_ficha2.Click += new System.EventHandler(this.Img_ficha2_Click_1);
             this.Img_ficha2.MouseEnter += new System.EventHandler(this.Img_ficha2_MouseEnter);
             this.Img_ficha2.MouseLeave += new System.EventHandler(this.Img_ficha2_MouseLeave);
             // 
@@ -379,6 +381,7 @@ namespace Proyecto2
             this.Img_ficha3.TabIndex = 8;
             this.Img_ficha3.TabStop = false;
             this.Img_ficha3.UseTransparentBackground = true;
+            this.Img_ficha3.Click += new System.EventHandler(this.Img_ficha3_Click);
             this.Img_ficha3.MouseEnter += new System.EventHandler(this.Img_ficha3_MouseEnter);
             this.Img_ficha3.MouseLeave += new System.EventHandler(this.Img_ficha3_MouseLeave);
             // 
@@ -395,6 +398,7 @@ namespace Proyecto2
             this.Img_ficha4.TabIndex = 9;
             this.Img_ficha4.TabStop = false;
             this.Img_ficha4.UseTransparentBackground = true;
+            this.Img_ficha4.Click += new System.EventHandler(this.Img_ficha4_Click);
             this.Img_ficha4.MouseEnter += new System.EventHandler(this.Img_ficha4_MouseEnter);
             this.Img_ficha4.MouseLeave += new System.EventHandler(this.Img_ficha4_MouseLeave);
             // 
@@ -411,6 +415,7 @@ namespace Proyecto2
             this.Img_ficha5.TabIndex = 10;
             this.Img_ficha5.TabStop = false;
             this.Img_ficha5.UseTransparentBackground = true;
+            this.Img_ficha5.Click += new System.EventHandler(this.Img_ficha5_Click);
             this.Img_ficha5.MouseEnter += new System.EventHandler(this.Img_ficha5_MouseEnter);
             this.Img_ficha5.MouseLeave += new System.EventHandler(this.Img_ficha5_MouseLeave);
             // 
@@ -427,6 +432,7 @@ namespace Proyecto2
             this.Img_ficha6.TabIndex = 11;
             this.Img_ficha6.TabStop = false;
             this.Img_ficha6.UseTransparentBackground = true;
+            this.Img_ficha6.Click += new System.EventHandler(this.Img_ficha6_Click);
             this.Img_ficha6.MouseEnter += new System.EventHandler(this.Img_ficha6_MouseEnter);
             this.Img_ficha6.MouseLeave += new System.EventHandler(this.Img_ficha6_MouseLeave);
             // 
@@ -443,6 +449,7 @@ namespace Proyecto2
             this.Img_ficha7.TabIndex = 12;
             this.Img_ficha7.TabStop = false;
             this.Img_ficha7.UseTransparentBackground = true;
+            this.Img_ficha7.Click += new System.EventHandler(this.Img_ficha7_Click);
             this.Img_ficha7.MouseEnter += new System.EventHandler(this.Img_ficha7_MouseEnter);
             this.Img_ficha7.MouseLeave += new System.EventHandler(this.Img_ficha7_MouseLeave);
             // 
