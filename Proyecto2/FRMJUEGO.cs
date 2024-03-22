@@ -242,10 +242,7 @@ namespace Proyecto2
                         //En caso de ya haber recorrido las 6 filas muestra un
                         //mensaje de que la columna esta llena
                 }
-            }
-
-
-        }
+            }       
         private void Img_ficha2_Click_1(object sender, EventArgs e)
         {
             columnaSeleccionada = 1;
