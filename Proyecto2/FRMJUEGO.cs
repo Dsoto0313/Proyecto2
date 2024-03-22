@@ -146,6 +146,8 @@ namespace Proyecto2
 
                 case 1:
                     F50.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -160,6 +162,8 @@ namespace Proyecto2
                         break;
                 case 2:
                     F40.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -173,6 +177,8 @@ namespace Proyecto2
                         break;
                 case 3:
                     F30.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -186,6 +192,8 @@ namespace Proyecto2
                         break;
                 case 4:
                     F20.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -199,6 +207,8 @@ namespace Proyecto2
                         break;
                 case 5:
                     F10.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -212,6 +222,8 @@ namespace Proyecto2
                         break;
                 case 6:
                     F00.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha1.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, 0] = 1;
@@ -229,6 +241,7 @@ namespace Proyecto2
                         break;
                         //En caso de ya haber recorrido las 6 filas muestra un
                         //mensaje de que la columna esta llena
+                }
             }
 
 
@@ -242,6 +255,8 @@ namespace Proyecto2
                 {
                     case 1:
                     F51.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -256,6 +271,8 @@ namespace Proyecto2
                         break;
                     case 2:
                     F41.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -270,6 +287,8 @@ namespace Proyecto2
                         break;
                     case 3:
                     F31.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -284,6 +303,8 @@ namespace Proyecto2
                         break;
                     case 4:
                     F21.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -298,6 +319,8 @@ namespace Proyecto2
                         break;
                     case 5:
                     F11.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -312,6 +335,8 @@ namespace Proyecto2
                         break;
                     case 6:
                     F01.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha2.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, columnaSeleccionada] = 1;
@@ -328,7 +353,8 @@ namespace Proyecto2
                         MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
                         break;
-            }
+
+                }
         }
         private void Img_ficha3_Click(object sender, EventArgs e)
         {
@@ -339,6 +365,8 @@ namespace Proyecto2
             {
                 case 1:
                     F52.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -353,6 +381,8 @@ namespace Proyecto2
                         break;
                 case 2:
                     F42.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -367,6 +397,8 @@ namespace Proyecto2
                         break;
                 case 3:
                     F32.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -381,6 +413,8 @@ namespace Proyecto2
                         break;
                 case 4:
                     F22.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -395,6 +429,8 @@ namespace Proyecto2
                         break;
                 case 5:
                     F12.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -409,6 +445,8 @@ namespace Proyecto2
                         break;
                 case 6:
                     F02.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha3.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, columnaSeleccionada] = 1;
@@ -426,6 +464,7 @@ namespace Proyecto2
                         CambiarTurno();
                         break;
             }
+
         }
         private void Img_ficha4_Click(object sender, EventArgs e)
         {
@@ -436,6 +475,8 @@ namespace Proyecto2
             {
                 case 1:
                     F53.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -451,6 +492,8 @@ namespace Proyecto2
                         break;
                 case 2:
                     F43.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -465,6 +508,8 @@ namespace Proyecto2
                         break;
                 case 3:
                     F33.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -479,6 +524,8 @@ namespace Proyecto2
                         break;
                 case 4:
                     F23.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -493,6 +540,8 @@ namespace Proyecto2
                         break;
                 case 5:
                     F13.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -507,6 +556,8 @@ namespace Proyecto2
                         break;
                 case 6:
                     F03.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha4.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, columnaSeleccionada] = 1;
@@ -534,6 +585,8 @@ namespace Proyecto2
             {
                 case 1:
                     F54.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -548,6 +601,8 @@ namespace Proyecto2
                         break;
                 case 2:
                     F44.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -562,6 +617,8 @@ namespace Proyecto2
                         break;
                 case 3:
                     F34.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -576,6 +633,8 @@ namespace Proyecto2
                         break;
                 case 4:
                     F24.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -590,6 +649,8 @@ namespace Proyecto2
                         break;
                 case 5:
                     F14.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -604,6 +665,8 @@ namespace Proyecto2
                         break;
                 case 6:
                     F04.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha5.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, columnaSeleccionada] = 1;
@@ -631,6 +694,8 @@ namespace Proyecto2
             {
                 case 1:
                     F55.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[5, columnaSeleccionada] = 1;
@@ -645,6 +710,8 @@ namespace Proyecto2
                         break;
                 case 2:
                     F45.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[4, columnaSeleccionada] = 1;
@@ -659,6 +726,8 @@ namespace Proyecto2
                         break;
                 case 3:
                     F35.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[3, columnaSeleccionada] = 1;
@@ -673,6 +742,8 @@ namespace Proyecto2
                         break;
                 case 4:
                     F25.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[2, columnaSeleccionada] = 1;
@@ -687,6 +758,8 @@ namespace Proyecto2
                         break;
                 case 5:
                     F15.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[1, columnaSeleccionada] = 1;
@@ -701,6 +774,8 @@ namespace Proyecto2
                         break;
                 case 6:
                     F05.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        Img_ficha6.Image = ObtenerImagenSiguienteJugador();
+                        break;
                         if (turnoActual == 1)
                         {
                             tableroJugador1[0, columnaSeleccionada] = 1;
