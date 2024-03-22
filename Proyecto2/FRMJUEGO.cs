@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto2.Mensajes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,10 @@ namespace Proyecto2
     public partial class FRMJUEGO : Form
 
     {
-        int[,] tablero = new int[6, 7];
+        int[,] tablero = new int[6, 7]; //Tablero para visualizacion
+        int[,] tableroJugador1 = new int[6, 7];// este tablero lleva se usa para calcular la victoria
+        int[,] tableroJugador2 = new int[6, 7];// este tablero lleva se usa para calcular la victoria
+
         int turnoActual = 1;
         private Queue<string> turnos; // Cola para almacenar el orden de los turnos
         private Stack<string> ordenJugadas; // Pila para almacenar el orden de las jugadas
@@ -142,31 +146,89 @@ namespace Proyecto2
 
                 case 1:
                     F50.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 2:
                     F40.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[4, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                        }
+                        else
+                        {
+                            tableroJugador2[4, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F30.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[3, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                        }
+                        else
+                        {
+                            tableroJugador2[3, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F20.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[2, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                        }
+                        else
+                        {
+                            tableroJugador2[2, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
                     F10.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[1, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                        }
+                        else
+                        {
+                            tableroJugador2[1, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F00.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[0, 0] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                        }
+                        else
+                        {
+                            tableroJugador2[0, 0] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                         MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
                         break;
                         //En caso de ya haber recorrido las 6 filas muestra un
                         //mensaje de que la columna esta llena
-
-
-
             }
 
 
@@ -180,22 +242,88 @@ namespace Proyecto2
                 {
                     case 1:
                     F51.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                     case 2:
                     F41.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                     case 3:
                     F31.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                     case 4:
                     F21.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                     case 5:
                     F11.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                     case 6:
                     F01.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                         MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
@@ -212,22 +340,88 @@ namespace Proyecto2
             {
                 case 1:
                     F52.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 2:
                     F42.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F32.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F22.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
                     F12.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F02.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                     MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
@@ -244,22 +438,89 @@ namespace Proyecto2
             {
                 case 1:
                     F53.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+
+                        break;
                 case 2:
                     F43.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F33.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F23.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
                     F13.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F03.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                         MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
@@ -276,22 +537,88 @@ namespace Proyecto2
             {
                 case 1:
                     F54.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 2:
                     F44.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F34.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F24.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
                     F14.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F04.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                     MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
@@ -308,22 +635,88 @@ namespace Proyecto2
             {
                 case 1:
                     F55.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 2:
                     F45.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F35.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F25.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
                     F15.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F05.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                     MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
@@ -334,33 +727,100 @@ namespace Proyecto2
         private void Img_ficha7_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 6;
-            ObtenerPosicionVacia(columnaSeleccionada);
+           
             if (existePosicionVacia) 
             switch (contColumna7)
             {
                 case 1:
                     F56.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 2:
                     F46.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 3:
                     F36.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 4:
                     F26.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 5:
-                    F16.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        F16.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 case 6:
                     F06.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
-                    break;
+                        if (turnoActual == 1)
+                        {
+                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
+                            //Si alguien gana aqui se puede imprimir el mensaje  
+                        }
+                        else
+                        {
+                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
+                        }
+                        break;
                 default:
                     MessageBox.Show("La columna seleccionada está llena");
                         CambiarTurno();
                         break;
             }
+            ObtenerPosicionVacia(columnaSeleccionada);
         }
         #endregion 
 
@@ -495,18 +955,18 @@ namespace Proyecto2
                     tablero[fila, columnaSeleccionada] = 1;
 
 
-                    //Logica para validar si un jugador ganó
-                    //if (ControlVictoria.Gano(tablero))
-                    //{
-                    // Si alguien gana aqui se puede imprimir el mensaje
-                    //MessageBox.Show("El jugador " + turnoActual + " ganó");
-                    //}
+
+
 
                     existePosicionVacia = true; // Marcamos que encontramos una posición vacía
 
 
                 }
+                //Logica para validar si un jugador ganó
+
+
             }
+         
             switch (columnaSeleccionada)
                     {
                         case 0: contColumna1++; break;
@@ -518,10 +978,18 @@ namespace Proyecto2
                         case 6: contColumna7++; break;
                     }
             CambiarTurno(); // Cambia el turno al siguiente jugador
-            return "Posición vacía encontrada";
+            if(existePosicionVacia)
+            {
+                return "Posición vacía encontrada";
+            }
+            else
+            {
+                return null;
+            }
+            
                           
             // Si todas las posiciones están llenas, retornamos nulo
-            return null;
+            
 
         }
 
@@ -566,10 +1034,10 @@ namespace Proyecto2
             
         }
 
-        private void DeterminarGanadorYGuardarEnPila()
+        private void DeterminarGanadorYGuardarEnPila(int[,] TablaDeJugador,string Nombre)
         {
             // Utiliza la clase ControlVictoria para determinar si hay un ganador
-            bool hayGanador = ControlVictoria.Gano(tablero);
+            bool hayGanador = ControlVictoria.Gano(TablaDeJugador);
 
             // Si hay un ganador, determina qué jugador ganó y guarda el resultado en la pila correspondiente
             if (hayGanador)
@@ -578,10 +1046,12 @@ namespace Proyecto2
                 if (turnoActual == 1)
                 {
                     victoriasJugador1.Push(1); // Guarda un 1 en la pila del jugador 1
+                    Mensaje.MostrarMensaje(true, "Victoria " + Nombre);
                 }
                 else
                 {
                     victoriasJugador2.Push(2); // Guarda un 2 en la pila del jugador 2
+                    Mensaje.MostrarMensaje(true, "Victoria " + Nombre);
                 }
 
                 // Aquí podrías mostrar un mensaje o realizar otras acciones cuando un jugador gana

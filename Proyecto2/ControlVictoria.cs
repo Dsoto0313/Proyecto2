@@ -13,9 +13,9 @@ namespace Proyecto2
             int Consecutivo = 0; // Variable para rastrear la cantidad de elementos consecutivos iguales
 
             // Revision Vertical de arriba a abajo
-            for (int v = 0; v < 6; v++) // Recorre verticalmente la matriz de arriba a abajo
+            for (int v = 0; v < 7; v++) // Recorre verticalmente la matriz de arriba a abajo
             {
-                for (int h = 0; h < 5; h++) // Recorre horizontalmente la matriz de izquierda a derecha
+                for (int h = 0; h < 6; h++) // Recorre horizontalmente la matriz de izquierda a derecha
                 {
                     if (Matriz[h, v] == 1) // Si el elemento es igual a 1
                     {
@@ -32,11 +32,11 @@ namespace Proyecto2
                     }
                 }
             }
-
+            Consecutivo = 0;
             // Revision Horizontal de izquierda a derecha
             for (int h = 0; h < 6; h++) // Recorre horizontalmente la matriz de izquierda a derecha
             {
-                for (int v = 0; v < 6; v++) // Recorre verticalmente la matriz de arriba a abajo
+                for (int v = 0; v < 7; v++) // Recorre verticalmente la matriz de arriba a abajo
                 {
                     if (Matriz[h, v] == 1) // Si el elemento es igual a 1
                     {
@@ -53,7 +53,7 @@ namespace Proyecto2
                     }
                 }
             }
-
+            Consecutivo = 0;
             // Revision diagonal de izquierda a derecha
             for (int h = 0; h < 6; h++) // Recorre horizontalmente la matriz de izquierda a derecha
             {
@@ -77,7 +77,7 @@ namespace Proyecto2
                     }
                 }
             }
-
+            Consecutivo = 0;
             // Revision diagonal de derecha a izquierda
             for (int h = 0; h < 6; h++) // Recorre horizontalmente la matriz de izquierda a derecha
             {
