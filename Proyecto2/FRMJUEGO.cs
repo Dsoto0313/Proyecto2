@@ -258,13 +258,13 @@ namespace Proyecto2
                     F41.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -272,13 +272,13 @@ namespace Proyecto2
                     F31.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -286,13 +286,13 @@ namespace Proyecto2
                     F21.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -300,13 +300,13 @@ namespace Proyecto2
                     F11.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -314,13 +314,13 @@ namespace Proyecto2
                     F01.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -330,7 +330,6 @@ namespace Proyecto2
                         break;
             }
         }
-
         private void Img_ficha3_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 2;
@@ -356,13 +355,13 @@ namespace Proyecto2
                     F42.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -370,13 +369,13 @@ namespace Proyecto2
                     F32.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -384,13 +383,13 @@ namespace Proyecto2
                     F22.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -398,13 +397,13 @@ namespace Proyecto2
                     F12.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -412,13 +411,13 @@ namespace Proyecto2
                     F02.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -428,7 +427,6 @@ namespace Proyecto2
                         break;
             }
         }
-
         private void Img_ficha4_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 3;
@@ -455,13 +453,13 @@ namespace Proyecto2
                     F43.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -469,13 +467,13 @@ namespace Proyecto2
                     F33.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -483,13 +481,13 @@ namespace Proyecto2
                     F23.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -497,13 +495,13 @@ namespace Proyecto2
                     F13.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -511,13 +509,13 @@ namespace Proyecto2
                     F03.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -527,7 +525,6 @@ namespace Proyecto2
                         break;
             }
         }
-
         private void Img_ficha5_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 4;
@@ -553,13 +550,13 @@ namespace Proyecto2
                     F44.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -567,13 +564,13 @@ namespace Proyecto2
                     F34.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -581,13 +578,13 @@ namespace Proyecto2
                     F24.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -595,13 +592,13 @@ namespace Proyecto2
                     F14.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -609,13 +606,13 @@ namespace Proyecto2
                     F04.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -625,7 +622,6 @@ namespace Proyecto2
                         break;
             }
         }
-
         private void Img_ficha6_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 5;
@@ -651,13 +647,13 @@ namespace Proyecto2
                     F45.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -665,13 +661,13 @@ namespace Proyecto2
                     F35.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -679,13 +675,13 @@ namespace Proyecto2
                     F25.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -693,13 +689,13 @@ namespace Proyecto2
                     F15.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -707,13 +703,13 @@ namespace Proyecto2
                     F05.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -723,7 +719,6 @@ namespace Proyecto2
                         break;
             }
         }
-
         private void Img_ficha7_Click(object sender, EventArgs e)
         {
             columnaSeleccionada = 6;
@@ -749,13 +744,13 @@ namespace Proyecto2
                     F46.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[4, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -763,13 +758,13 @@ namespace Proyecto2
                     F36.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[3, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -777,13 +772,13 @@ namespace Proyecto2
                     F26.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[2, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -791,13 +786,13 @@ namespace Proyecto2
                         F16.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[1, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
@@ -805,13 +800,13 @@ namespace Proyecto2
                     F06.Image = (turnoActual == 1) ? Jugador1.Imagen : Jugador2.Imagen;
                         if (turnoActual == 1)
                         {
-                            tableroJugador1[5, columnaSeleccionada] = 1;
+                            tableroJugador1[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador1, Jugador1.nombre);
                             //Si alguien gana aqui se puede imprimir el mensaje  
                         }
                         else
                         {
-                            tableroJugador2[5, columnaSeleccionada] = 1;
+                            tableroJugador2[0, columnaSeleccionada] = 1;
                             DeterminarGanadorYGuardarEnPila(tableroJugador2, Jugador2.nombre);
                         }
                         break;
