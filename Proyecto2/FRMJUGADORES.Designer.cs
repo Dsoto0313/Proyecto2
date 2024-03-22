@@ -289,6 +289,7 @@ namespace Proyecto2
             this.Txb_J2.Size = new System.Drawing.Size(284, 36);
             this.Txb_J2.TabIndex = 0;
             this.Txb_J2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txb_J2.TextChanged += new System.EventHandler(this.Txb_J2_TextChanged);
             // 
             // Btn_AsignarJ1
             // 

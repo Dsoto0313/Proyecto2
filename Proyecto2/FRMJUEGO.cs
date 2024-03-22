@@ -23,6 +23,8 @@ namespace Proyecto2
         int turnoActual = 1;
         private Queue<string> turnos; // Cola para almacenar el orden de los turnos
         private Stack<string> ordenJugadas; // Pila para almacenar el orden de las jugadas
+        private Stack<int> victoriasJugador1 = new Stack<int>();
+        private Stack<int> victoriasJugador2 = new Stack<int>();
         private string jugadorActual; // Nombre del jugador actual
         private bool mouseDown;
         private Point lastPos;
@@ -49,7 +51,7 @@ namespace Proyecto2
                 }
             }
         
-        turnos = new Queue<string>(); // Inicialización de la cola
+             turnos = new Queue<string>(); // Inicialización de la cola
              ordenJugadas = new Stack<string>(); // Inicialización de la pila
             AgregarJugadoresACola(); // Llenar la cola con los nombres de los jugadores
             MezclarTurnos(); // Mezclar la cola para el primer turno aleatorio
@@ -396,7 +398,7 @@ namespace Proyecto2
             // verificar el nombre del jugador actual y devolver la imagen correspondiente
             return (turnoActual == 1) ? Jugador2.Imagen : Jugador1.Imagen;
         }
-#endregion
+        #endregion
 
 
         // En esta region se configura la funcion de morstrar la imagen del
@@ -522,8 +524,69 @@ namespace Proyecto2
             return null;
 
         }
-    #endregion  
 
+        #endregion
+
+        private void btnNuevaRonda_Click(object sender, EventArgs e)
+        {
+           LimpiarTabla();
+        }
+
+        private void LimpiarTabla()
+        {
+            // Recorrer todos los controles en la forma
+            foreach (Control control in Controls)
+            {
+                // Verificar si el control es un PictureBox y no es guna2PictureBox1
+                if (control is PictureBox pictureBox && pictureBox != guna2PictureBox1)
+                {
+                    // Establecer la imagen del PictureBox en null
+                    pictureBox.Image = null;
+                }
+            }
+
+            // Reiniciar los contadores de victorias a cero
+            // Asegúrate de reemplazar estos nombres con los contadores de tu implementación
+            contColumna1 = 0;
+            contColumna2 = 0;
+            contColumna3 = 0;
+            contColumna4 = 0;
+            contColumna5 = 0;
+            contColumna6 = 0;
+            contColumna7 = 0;
+        }
+
+        private void LabelVictoriasJ1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LabelVictoriasJ2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void DeterminarGanadorYGuardarEnPila()
+        {
+            // Utiliza la clase ControlVictoria para determinar si hay un ganador
+            bool hayGanador = ControlVictoria.Gano(tablero);
+
+            // Si hay un ganador, determina qué jugador ganó y guarda el resultado en la pila correspondiente
+            if (hayGanador)
+            {
+               
+                if (turnoActual == 1)
+                {
+                    victoriasJugador1.Push(1); // Guarda un 1 en la pila del jugador 1
+                }
+                else
+                {
+                    victoriasJugador2.Push(2); // Guarda un 2 en la pila del jugador 2
+                }
+
+                // Aquí podrías mostrar un mensaje o realizar otras acciones cuando un jugador gana
+            }
+        }
 
     }
 
