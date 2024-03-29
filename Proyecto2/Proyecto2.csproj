@@ -65,6 +65,7 @@
     <Compile Include="FRMJUGADORES.Designer.cs">
       <DependentUpon>FRMJUGADORES.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuardarPartida.cs" />
     <Compile Include="Jugadores.cs" />
     <Compile Include="Mensajes\FRMERROR.cs">
       <SubType>Form</SubType>

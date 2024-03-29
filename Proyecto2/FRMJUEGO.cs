@@ -26,6 +26,7 @@ namespace Proyecto2
 
         int turnoActual = 1;
         private Queue<string> turnos; // Cola para almacenar el orden de los turnos
+        private Queue<string> Guardar; 
         private Stack<string> ordenJugadas; // Pila para almacenar el orden de las jugadas
         private Stack<int> victoriasJugador1 = new Stack<int>();
         private Stack<int> victoriasJugador2 = new Stack<int>();
@@ -41,7 +42,8 @@ namespace Proyecto2
         int contColumna6 = 0;
         int contColumna7 = 0;
         bool existePosicionVacia = false;
-
+        private object contadorVictoriasJugador1;
+        private object contadorVictoriasJugador2;
 
         public FRMJUEGO()
         {
@@ -1061,10 +1063,40 @@ namespace Proyecto2
         }
 
         #endregion
-
+          
         private void btnNuevaRonda_Click(object sender, EventArgs e)
         {
-           LimpiarTabla();
+            ReiniciarPartidas();
+        }
+
+        private void ReiniciarPartidas() 
+        {
+            // Recorrer todos los controles en la forma
+            foreach (Control control in Controls)
+            {
+                // Verificar si el control es un PictureBox y no es guna2PictureBox1
+                if (control is PictureBox pictureBox && pictureBox != guna2PictureBox1)
+                {
+                    // Establecer la imagen del PictureBox en null
+                    pictureBox.Image = null;
+                }
+            }
+
+            // Reiniciar los contadores de victorias a cero
+            // Asegúrate de reemplazar estos nombres con los contadores de tu implementación
+            contColumna1 = 0;
+            contColumna2 = 0;
+            contColumna3 = 0;
+            contColumna4 = 0;
+            contColumna5 = 0;
+            contColumna6 = 0;
+            contColumna7 = 0;
+
+            LabelVictoriasJ1.Text = "0";
+            LabelVictoriasJ2.Text = "0";
+
+            // Limpiar la pila de orden de jugadas
+            ordenJugadas.Clear();
         }
 
         private void LimpiarTabla()
@@ -1091,38 +1123,82 @@ namespace Proyecto2
             contColumna7 = 0;
         }
 
-        private void LabelVictoriasJ1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void LabelVictoriasJ2_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void DeterminarGanadorYGuardarEnPila(int[,] TablaDeJugador,string Nombre)
         {
             // Utiliza la clase ControlVictoria para determinar si hay un ganador
             bool hayGanador = ControlVictoria.Gano(TablaDeJugador);
 
+            // Obtiene el número de columna donde se realizó la jugada
+            int columna = columnaSeleccionada + 1;
+
+            // Construye el mensaje de la jugada
+            string mensajeJugada = string.Format("Jugador {0}, movió en columna {1}, turno {2}", Nombre, columna, turnoActual);
+
+            // Agrega el mensaje de la jugada al historial de jugadas
+            ordenJugadas.Push(mensajeJugada);
+
+            if (ordenJugadas.Count == 42)
+            {
+                // Si se alcanza el límite de movimientos, muestra un mensaje de empate
+                MessageBox.Show("¡Empate! Se han realizado todos los movimientos posibles sin un ganador.", "Empate");
+
+                // Limpia la tabla
+                LimpiarTabla();
+            }
+
             // Si hay un ganador, determina qué jugador ganó y guarda el resultado en la pila correspondiente
             if (hayGanador)
             {
-               
+                
                 if (turnoActual == 1)
                 {
                     victoriasJugador1.Push(1); // Guarda un 1 en la pila del jugador 1
                     Mensaje.MostrarMensaje(true, "Victoria " + Nombre);
+                    LabelVictoriasJ1.Text = victoriasJugador1.Count.ToString(); // Actualiza la etiqueta con el número de victorias del jugador 1
+                    LimpiarTabla();
                 }
                 else
                 {
                     victoriasJugador2.Push(2); // Guarda un 2 en la pila del jugador 2
                     Mensaje.MostrarMensaje(true, "Victoria " + Nombre);
+                    LabelVictoriasJ2.Text = victoriasJugador2.Count.ToString(); // Actualiza la etiqueta con el número de victorias del jugador 
+                    LimpiarTabla();
                 }
-
                 // Aquí podrías mostrar un mensaje o realizar otras acciones cuando un jugador gana
             }
+
+        }
+
+        private void GuardarPartida(int[,] tableroJugador1, int[,] tableroJugador2, int contadorVictoriasJugador1, int contadorVictoriasJugador2, Queue<string> historialJugadas) 
+        {
+
+            try
+            {
+                // Crear una instancia de GuardarPartida con los datos actuales del juego
+                GuardarPartida partidaGuardada = new GuardarPartida(tableroJugador1, tableroJugador2,
+                                                                    contadorVictoriasJugador1, contadorVictoriasJugador2,
+                                                                    new Queue<string>(historialJugadas));
+
+                // Guardar la partida en la cola Guardar
+                partidaGuardada.GuardarEnCola(Guardar);
+
+                // Notificar al usuario que la partida se ha guardado correctamente
+                MessageBox.Show("Partida guardada correctamente.", "Guardar partida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Mostrar un mensaje de error si ocurre algún problema durante el guardado
+                MessageBox.Show("Error al guardar la partida: " + ex.Message, "Guardar partida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void GuardarEnCola(Queue<string> colaGuardar)
+        {
+            // Construir una cadena que represente los datos de la partida y agregarla a la cola
+            string datosPartida = $"{tableroJugador1},{tableroJugador2},{contadorVictoriasJugador1},{contadorVictoriasJugador2}";
+            colaGuardar.Enqueue(datosPartida);
         }
 
     }
