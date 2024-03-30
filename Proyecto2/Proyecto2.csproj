@@ -73,6 +73,12 @@
     <Compile Include="Mensajes\FRMERROR.Designer.cs">
       <DependentUpon>FRMERROR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mensajes\FRMNuevaRonda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajes\FRMNuevaRonda.Designer.cs">
+      <DependentUpon>FRMNuevaRonda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mensajes\FRMEXITO.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mensajes\FRMERROR.resx">
       <DependentUpon>FRMERROR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajes\FRMNuevaRonda.resx">
+      <DependentUpon>FRMNuevaRonda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mensajes\FRMEXITO.resx">
       <DependentUpon>FRMEXITO.cs</DependentUpon>

@@ -241,6 +241,7 @@ namespace Proyecto2
             this.guna2Button3.TabIndex = 2;
             this.guna2Button3.Text = "Cargar Partida";
             this.guna2Button3.UseTransparentBackground = true;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -261,6 +262,7 @@ namespace Proyecto2
             this.guna2Button2.TabIndex = 1;
             this.guna2Button2.Text = "Guardar partida";
             this.guna2Button2.UseTransparentBackground = true;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // btnNuevaRonda
             // 
@@ -1076,7 +1078,6 @@ namespace Proyecto2
             this.LabelVictoriasJ1.TabIndex = 4;
             this.LabelVictoriasJ1.Text = "0";
             this.LabelVictoriasJ1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.LabelVictoriasJ1.Click += new System.EventHandler(this.LabelVictoriasJ1_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -1126,7 +1127,6 @@ namespace Proyecto2
             this.LabelVictoriasJ2.TabIndex = 4;
             this.LabelVictoriasJ2.Text = "0";
             this.LabelVictoriasJ2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.LabelVictoriasJ2.Click += new System.EventHandler(this.LabelVictoriasJ2_Click);
             // 
             // guna2HtmlLabel6
             // 
@@ -1297,7 +1297,6 @@ namespace Proyecto2
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button btnNuevaRonda;
         private System.Windows.Forms.ImageList imageList1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox Img_ficha1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox Img_ficha2;
@@ -1357,5 +1356,6 @@ namespace Proyecto2
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        public Guna.UI2.WinForms.Guna2Button btnNuevaRonda;
     }
 }

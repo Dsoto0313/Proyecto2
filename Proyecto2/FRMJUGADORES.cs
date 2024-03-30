@@ -24,7 +24,11 @@ namespace Proyecto2
         private void Btn_Jugador1_Click(object sender, EventArgs e)
         {
             Jugador1.nombre = Txb_J1.Text;
-            if(Abrir_Imagen.ShowDialog() == DialogResult.OK)
+            Abrir_Imagen.Title = "Seleccionar imagen ";
+
+            // Establecer el filtro para mostrar solo archivos de imagen
+            Abrir_Imagen.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            if (Abrir_Imagen.ShowDialog() == DialogResult.OK)
             {
                 Jugador1.Imagen = Image.FromFile(Abrir_Imagen.FileName);
                 Img_J1.Image = Jugador1.Imagen;
@@ -38,7 +42,11 @@ namespace Proyecto2
         {
             try
             {
-                
+                Abrir_Imagen.Title = "Seleccionar imagen ";
+
+                // Establecer el filtro para mostrar solo archivos de imagen
+                Abrir_Imagen.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+
                 if (Abrir_Imagen.ShowDialog() == DialogResult.OK)
                 {
                     Jugador2.Imagen = Image.FromFile(Abrir_Imagen.FileName);
@@ -68,7 +76,7 @@ namespace Proyecto2
                 Btn_AsignarJ1.Visible = true;
                 Btn_AsignarJ2.Visible = false;
                 Btn_Jugar.Visible = true;
-                Mensaje.MostrarMensaje(true, "Jugador 1 agregado con éxito");
+                
             }
             
         }
@@ -90,9 +98,14 @@ namespace Proyecto2
 
         private void Btn_Jugar_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrEmpty(Txb_J2.Text))
             {
                 Mensaje.MostrarMensaje(false, "Debe escribir un nombre para el jugador 2");
+            }
+            else if (Txb_J2.Text == Txb_J1.Text)
+            {
+                Mensaje.MostrarMensaje(false, "Los nombres de los jugadores no pueden ser iguales");
             }
             else if (Jugador2.Imagen == null)
             {
